@@ -16,20 +16,14 @@
   <body> 
 
     <header>
-      <div class="container">
-        <div class="navbar-header">
-          <a href="../" class="navbar-brand" id="logo">
-            <img src="resources/imagens/logotipo.png" width="60" height="60" />
-          </a>
-        </div>
-      </div>
     </header>
 
     <div class="container" id="form-login">
 
       <section id="section-login">
         <form role="form" class="form-horizontal">
-
+		<img id="logo" src="resources/imagens/logo_ilegra.png">
+		<h4 id="titulo-login">Lançamento de Horas</h4>
           <div class="input-group col-sm-12">
             <span class="input-group-addon">
               <span class="glyphicon glyphicon-user"></span>
@@ -43,10 +37,16 @@
             </span>
             <input type="password" name="senha" id="senha" required  class="form-control" placeholder="Senha" /> 
           </div><br />
-
-          <input type="submit" value="logar" class="btn btn-primary" />
+		  
+			<div class="row">
+				<div class="col-sm-12">
+			<input id="botao" type="submit" value="Acessar" class="btn btn-warning" />
+				</div>
+			</div>
         </form>
       </section>
     </div> <!-- /container -->
   </body>
+  <footer>
+  </footer>
 </html>

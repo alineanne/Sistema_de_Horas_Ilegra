@@ -1,12 +1,16 @@
 header {
-	height: 100px;
+	height: 110px;
 	background-color: #4C4C4C;
-	margin-bottom: 20px;
+	margin-bottom: 150px;
 }
 
+
+
+@media (min-width: 400px) {
 #section-login{
 	width: 400px;
 	margin: 0 auto;
+}
 }
 
 th{
@@ -17,3 +21,32 @@ tbody td{
 	border: 1px solid #7e7e7e;
 }
 
+#titulo-login{
+margin-left: 20px;
+color: white;
+display: inline-block;
+margin-top: 25px;
+vertical-align: middle;
+font-size: 20px;
+color:#717173;
+}
+
+#logo {
+width: 120px;
+display:inline-block;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+footer {
+	height: 110px;
+	background-color: #4C4C4C;
+	margin-top: 310px;
+}
+
+#botao {
+	width:100px;
+	margin-left: 300px;
+	background-color: #EA7723;
+	border-color: #F0974D;
+}
