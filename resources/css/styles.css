@@ -4,13 +4,17 @@ header {
 	margin-bottom: 150px;
 }
 
-
+#logo_texto{
+	display: inline;
+	color: white;
+	margin-left: 20px;
+}
 
 @media (min-width: 400px) {
 #section-login{
 	width: 400px;
 	margin: 0 auto;
-}
+	}
 }
 
 th{
@@ -22,26 +26,26 @@ tbody td{
 }
 
 #titulo-login{
-margin-left: 20px;
-color: white;
-display: inline-block;
-margin-top: 25px;
-vertical-align: middle;
-font-size: 20px;
-color:#717173;
+	margin-left: 20px;
+	color: white;
+	display: inline-block;
+	margin-top: 25px;
+	vertical-align: middle;
+	font-size: 20px;
+	color:#717173;
 }
 
 #logo {
-width: 120px;
-display:inline-block;
-margin-top: 15px;
-margin-bottom: 15px;
-}
+	width: 120px;
+	display:inline-block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	}
 
 footer {
 	height: 110px;
 	background-color: #4C4C4C;
-	margin-top: 310px;
+	margin-top: 322px;
 }
 
 #botao {
@@ -49,4 +53,34 @@ footer {
 	margin-left: 300px;
 	background-color: #EA7723;
 	border-color: #F0974D;
+}
+
+#logo_listagem{
+	margin-top: 15px;
+}
+
+#titulo-listagem{
+	margin-top: 1px;
+}
+
+#botoes, #pesquisarBotao{
+	background-color: #EA7723;
+	border-color: #F0974D;
+}
+
+tr:hover td {
+	background-color: #c0c0c0;
+}
+
+#pesquisar {
+	background-color: #c0c0c0;
+}
+
+#descricao{
+	height:80px;
+}
+
+#horas{
+	text-align: right;
+	font-weight:bold;
 }
