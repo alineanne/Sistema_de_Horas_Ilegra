@@ -1,0 +1,17 @@
+/*** THEME   */
+
+.table caption{
+	/**background-color: #ccc;**/
+	/**text-align: center;**/
+	border-bottom: 1px solid #ff5722;
+	background-color:#ff5722;
+	color: #ffffff;	
+	text-align: center;
+}
+
+thead{
+	border-bottom: 1px solid #E8260C;
+	border-top: 1px solid #E8260C;
+	background-color:#E8260C;
+	color: #fff;
+}
