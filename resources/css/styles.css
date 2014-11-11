@@ -1,7 +1,6 @@
 header {
 	height: 110px;
 	background-color: #4C4C4C;
-	margin-bottom: 150px;
 }
 
 #logo_texto{
@@ -11,9 +10,14 @@ header {
 }
 
 @media (min-width: 400px) {
-#section-login{
-	width: 400px;
-	margin: 0 auto;
+	#section-login{
+		width: 400px;
+		margin: 0 auto;
+	}
+}
+@media (max-height: 580px) {
+	footer{
+		display: none;
 	}
 }
 
@@ -42,12 +46,6 @@ tbody td{
 	margin-bottom: 15px;
 	}
 
-footer {
-	height: 110px;
-	background-color: #4C4C4C;
-	margin-top: 322px;
-}
-
 #botao {
 	width:100px;
 	margin-left: 300px;
@@ -63,10 +61,6 @@ footer {
 	margin-top: 1px;
 }
 
-#botoes, #pesquisarBotao{
-	background-color: #EA7723;
-	border-color: #F0974D;
-}
 
 tr:hover td {
 	background-color: #c0c0c0;
@@ -83,4 +77,43 @@ tr:hover td {
 #horas{
 	text-align: right;
 	font-weight:bold;
+}
+
+
+/** Estrutura */
+
+
+html, body{
+	height: 100%;
+}
+
+#fundo_login{
+	display: block;
+	min-height: 100%;
+	margin-bottom: -110px;
+}
+
+footer {
+	height: 110px;
+	background-color: #4C4C4C;
+}
+
+#form-login{
+	margin-top: 7%;
+
+}
+
+#header_listagem{
+	margin-bottom: 15px;
+}
+
+/**
+Passar para temas
+
+*/
+
+.botoes{
+	background-color: #EA7723;
+	border-color: #F0974D;
+	color:#ffffff;
 }

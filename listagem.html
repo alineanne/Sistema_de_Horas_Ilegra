@@ -13,298 +13,300 @@
       <title>Sistema de Lançamento de Horas</title>
    </head>
    <body>
-      <header>
-         <div class="container">
-            <div class="navbar-header">
-               <img id="logo_listagem" src="resources/imagens/ilegra.png"/>
-               <h3 id="logo_texto">Sistema de Horas</h3>
+      <div class="fundo_novo">
+         <header id="header_listagem">
+            <div class="container">
+               <div class="navbar-header">
+                  <img id="logo_listagem" src="resources/imagens/ilegra.png"/>
+                  <h3 id="logo_texto">Sistema de Horas</h3>
+               </div>
             </div>
-         </div>
-      </header>
-      <div class="container" id="form-listagem">
-         <section id="section-pesquisa">
-            <a href="#" id="pesquisarBotao" class="btn btn-primary">Pesquisar</a>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" id="botoes" data-toggle="modal" data-target="#novaAtividadeModal">
-            Nova Atividade
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="novaAtividadeModal" tabindex="-1" role="dialog" aria-labelledby="modaltitulo" aria-hidden="true">
-               <div class="modal-dialog">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
-                        <h4 class="modal-title" id="modaltitulo">Nova Atividade</h4>
-                     </div>
-                     <div class="modal-body">
-                        <div class="container">
-                           <form  role="form" class="form-horizontal" style="display:block;" id="formulario_nova_atividade" >
-							  <div class="form-group">
-                                 <label for="data" class="control-label col-md-1">Data</label>
-                                 <div class="col-md-2">
-                                    <input type="date" name="data" id="data" class="form-control"/>
+         </header>
+         <div class="container" id="form-listagem">
+            <section id="section-pesquisa">
+               <a href="#" id="pesquisarBotao" class="btn botoes">Pesquisar</a>
+               <!-- Button trigger modal -->
+               <button type="button" class="btn botoes" data-toggle="modal" data-target="#novaAtividadeModal">
+               Nova Atividade
+               </button>
+               <!-- Modal -->
+               <div class="modal fade" id="novaAtividadeModal" tabindex="-1" role="dialog" aria-labelledby="modaltitulo" aria-hidden="true">
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+                           <h4 class="modal-title" id="modaltitulo">Nova Atividade</h4>
+                        </div>
+                        <div class="modal-body">
+                           <div class="container">
+                              <form  role="form" class="form-horizontal" style="display:block;" id="formulario_nova_atividade" >
+   							  <div class="form-group">
+                                    <label for="data" class="control-label col-md-1">Data</label>
+                                    <div class="col-md-2">
+                                       <input type="date" name="data" id="data" class="form-control"/>
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="form-group">
-                                 <label for="projeto" class="control-label col-sm-1">Projeto</label>
-                                 <div class="col-md-4">
-                                    <select name="projeto" id="projeto" class="form-control">
-                                       <option value="">Selecione...</option>
-                                       <option value="">Selecione...</option>
-                                    </select>
+                                 <div class="form-group">
+                                    <label for="projeto" class="control-label col-sm-1">Projeto</label>
+                                    <div class="col-md-4">
+                                       <select name="projeto" id="projeto" class="form-control">
+                                          <option value="">Selecione...</option>
+                                          <option value="">Selecione...</option>
+                                       </select>
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="form-group">
-                                 <label for="subprojeto" class="control-label col-md-1">Sub-projeto</label>
-                                 <div class="col-md-4">
-                                    <select name="subprojeto" id="subprojeto" class="form-control">
-                                       <option value="">Selecione...</option>
-                                    </select>
+                                 <div class="form-group">
+                                    <label for="subprojeto" class="control-label col-md-1">Sub-projeto</label>
+                                    <div class="col-md-4">
+                                       <select name="subprojeto" id="subprojeto" class="form-control">
+                                          <option value="">Selecione...</option>
+                                       </select>
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="form-group">
-                                 <label for="grupo" class="control-label col-md-1">Grupo</label>
-                                 <div class="col-md-4">
-                                    <select name="grupo" id="grupo" class="form-control">
-                                       <option value="">Selecione...</option>
-                                    </select>
+                                 <div class="form-group">
+                                    <label for="grupo" class="control-label col-md-1">Grupo</label>
+                                    <div class="col-md-4">
+                                       <select name="grupo" id="grupo" class="form-control">
+                                          <option value="">Selecione...</option>
+                                       </select>
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="form-group">
-                                 <label for="tipo_atividade" class="control-label col-md-1">Tipo Atividade</label>
-                                 <div class="col-md-4">
-                                    <select name="tipo_atividade" id="tipo_atividade" class="form-control">
-                                       <option value="">Selecione...</option>
-                                    </select>
+                                 <div class="form-group">
+                                    <label for="tipo_atividade" class="control-label col-md-1">Tipo Atividade</label>
+                                    <div class="col-md-4">
+                                       <select name="tipo_atividade" id="tipo_atividade" class="form-control">
+                                          <option value="">Selecione...</option>
+                                       </select>
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="form-group">
-                                 <label for="descricao" class="control-label col-md-1">Descrição</label>
-                                 <div class="col-md-4">
-                                    <input type="text" name="descricao" id="descricao" class="form-control" />
+                                 <div class="form-group">
+                                    <label for="descricao" class="control-label col-md-1">Descrição</label>
+                                    <div class="col-md-4">
+                                       <input type="text" name="descricao" id="descricao" class="form-control" />
+                                    </div>
                                  </div>
-                              </div>
-                           </form>
+                              </form>
+                           </div>
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn botoes" data-dismiss="modal">Fechar</button>
+                           <button type="button" class="btn botoes">Salvar</button>
                         </div>
                      </div>
-                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="botoes">Fechar</button>
-                        <button type="button" class="btn btn-primary" id="botoes">Salvar</button>
-                     </div>
                   </div>
                </div>
-            </div>
-            <!-- Modal Final-->
-            <form  role="form" class="form-horizontal" style="display:none;" id="formulario_pesquisa" >
-               <br />
-               <div class="jumbotron">
-			   <div class="form-group">
-                                 <label for="text" class="control-label col-md-2">Colaborador</label>
-                                 <div class="col-md-6">
-                                    <input type="text" name="colaborador" id="colaborador" class="form-control"/>
+               <!-- Modal Final-->
+               <form  role="form" class="form-horizontal" style="display:none;" id="formulario_pesquisa" >
+                  <br />
+                  <div class="jumbotron">
+   			   <div class="form-group">
+                                    <label for="text" class="control-label col-md-2">Colaborador</label>
+                                    <div class="col-md-6">
+                                       <input type="text" name="colaborador" id="colaborador" class="form-control"/>
+                                    </div>
                                  </div>
-                              </div>
-			   <div class="form-group">
-                                 <label for="data" class="control-label col-md-2">Mês/Ano</label>
-                                 <div class="col-md-3">
-                                    <input type="month" name="mes_ano" id="mes_ano" class="form-control"/>
+   			   <div class="form-group">
+                                    <label for="data" class="control-label col-md-2">Mês/Ano</label>
+                                    <div class="col-md-3">
+                                       <input type="month" name="mes_ano" id="mes_ano" class="form-control"/>
+                                    </div>
                                  </div>
-                              </div>
-                  <div class="form-group">
-                     <label for="data" class="control-label col-md-2">Data</label>
-                     <div class="col-md-3">
-                        <input type="date" name="data" id="data" class="form-control"/>
+                     <div class="form-group">
+                        <label for="data" class="control-label col-md-2">Data</label>
+                        <div class="col-md-3">
+                           <input type="date" name="data" id="data" class="form-control"/>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="projeto" class="control-label col-md-2" >Projeto</label>
+                        <div class="col-md-6">
+                           <select name="projeto" id="projeto" class="form-control">
+                              <option value="">Selecione...</option>
+                              <option value="">Selecione...</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="subprojeto" class="control-label col-md-2">Sub-projeto</label>
+                        <div class="col-md-6">
+                           <select name="subprojeto" id="subprojeto" class="form-control">
+                              <option value="">Selecione...</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="grupo" class="control-label col-md-2">Grupo</label>
+                        <div class="col-md-6">
+                           <select name="grupo" id="grupo" class="form-control">
+                              <option value="">Selecione...</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="tipo_atividade" class="control-label col-md-2">Tipo Atividade</label>
+                        <div class="col-md-6">
+                           <select name="tipo_atividade" id="tipo_atividade" class="form-control">
+                              <option value="">Selecione...</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="descricao" id="descricao" class="control-label col-md-2">Descrição</label>
+                        <div class="col-md-10">
+                           <input type="text" name="descricao" id="descricao" class="form-control" />
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                           <input type="submit" value="Pesquisar" id="pesquisar" class="btn"/>
+                        </div>
                      </div>
                   </div>
-                  <div class="form-group">
-                     <label for="projeto" class="control-label col-md-2" >Projeto</label>
-                     <div class="col-md-6">
-                        <select name="projeto" id="projeto" class="form-control">
-                           <option value="">Selecione...</option>
-                           <option value="">Selecione...</option>
-                        </select>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <label for="subprojeto" class="control-label col-md-2">Sub-projeto</label>
-                     <div class="col-md-6">
-                        <select name="subprojeto" id="subprojeto" class="form-control">
-                           <option value="">Selecione...</option>
-                        </select>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <label for="grupo" class="control-label col-md-2">Grupo</label>
-                     <div class="col-md-6">
-                        <select name="grupo" id="grupo" class="form-control">
-                           <option value="">Selecione...</option>
-                        </select>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <label for="tipo_atividade" class="control-label col-md-2">Tipo Atividade</label>
-                     <div class="col-md-6">
-                        <select name="tipo_atividade" id="tipo_atividade" class="form-control">
-                           <option value="">Selecione...</option>
-                        </select>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <label for="descricao" id="descricao" class="control-label col-md-2">Descrição</label>
-                     <div class="col-md-10">
-                        <input type="text" name="descricao" id="descricao" class="form-control" />
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Pesquisar" id="pesquisar" class="btn"/>
-                     </div>
-                  </div>
+               </form>
+            </section>
+            <br />
+            <section id="section-atividades">
+               <div class="table-responsive">
+                  <table class="table table-bordered table-hover table-striped ">
+                     <caption>
+                        <h4>Atividades</h4>
+                     </caption>
+                     <thead>
+                        <tr>
+                           <th>Data</th>
+                           <th>Hora Inicio</th>
+                           <th>Hora Fim</th>
+                           <th>Projeto</th>
+                           <th>Sub-Projeto</th>
+                           <th>Grupo</th>
+                           <th>Descrição</th>
+                           <th>Tipo Atividade</th>
+                           <th>Horas</th>
+                           <th>Ações</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>07/11/2014</td>
+                           <td>17:00</td>
+                           <td>18:10</td>
+                           <td>ILG-JT-DSV-JAVA</td>
+                           <td>DSV-APOIO-PROJ</td>
+                           <td></td>
+                           <td>Reunião com JT sobre o lançamento</td>
+                           <td>EN - DSV</td>
+                           <td>1.10</td>
+                           <td><img src="resources/imagens/editar.png">
+   							<img src="resources/imagens/deletar.png">
+   							<img src="resources/imagens/duplicar.png">
+   						</td>
+                        </tr>
+                        <tr>
+                           <td>07/11/2014</td>
+                           <td>17:00</td>
+                           <td>18:10</td>
+                           <td>ILG-JT-DSV-JAVA</td>
+                           <td>DSV-APOIO-PROJ</td>
+                           <td></td>
+                           <td>Reunião com JT sobre o lançamento</td>
+                           <td>EN - DSV</td>
+                           <td>1.10</td>
+                           <td><img src="resources/imagens/editar.png">
+   							<img src="resources/imagens/deletar.png">
+   							<img src="resources/imagens/duplicar.png">
+   						</td>
+                        </tr>
+                        <tr>
+                           <td>07/11/2014</td>
+                           <td>17:00</td>
+                           <td>18:10</td>
+                           <td>ILG-JT-DSV-JAVA</td>
+                           <td>DSV-APOIO-PROJ</td>
+                           <td></td>
+                           <td>Reunião com JT sobre o lançamento</td>
+                           <td>EN - DSV</td>
+                           <td>1.10</td>
+                           <td><img src="resources/imagens/editar.png">
+   							<img src="resources/imagens/deletar.png">
+   							<img src="resources/imagens/duplicar.png">
+   						</td>
+                        </tr>
+                        <tr>
+                           <td>07/11/2014</td>
+                           <td>17:00</td>
+                           <td>18:10</td>
+                           <td>ILG-JT-DSV-JAVA</td>
+                           <td>DSV-APOIO-PROJ</td>
+                           <td></td>
+                           <td>Reunião com JT sobre o lançamento</td>
+                           <td>EN - DSV</td>
+                           <td>1.10</td>
+                           <td><img src="resources/imagens/editar.png">
+   							<img src="resources/imagens/deletar.png">
+   							<img src="resources/imagens/duplicar.png">
+   						</td>
+                        </tr>
+                        <tr>
+                           <td>07/11/2014</td>
+                           <td>17:00</td>
+                           <td>18:10</td>
+                           <td>ILG-JT-DSV-JAVA</td>
+                           <td>DSV-APOIO-PROJ</td>
+                           <td></td>
+                           <td>Reunião com JT sobre o lançamento</td>
+                           <td>EN - DSV</td>
+                           <td>1.10</td>
+                           <td><img src="resources/imagens/editar.png">
+   							<img src="resources/imagens/deletar.png">
+   							<img src="resources/imagens/duplicar.png">
+   						</td>
+                        </tr>
+                        <tr>
+                           <td>07/11/2014</td>
+                           <td>17:00</td>
+                           <td>18:10</td>
+                           <td>ILG-JT-DSV-JAVA</td>
+                           <td>DSV-APOIO-PROJ</td>
+                           <td></td>
+                           <td>Reunião com JT sobre o lançamento</td>
+                           <td>EN - DSV</td>
+                           <td>1.10</td>
+                           <td><img src="resources/imagens/editar.png">
+   							<img src="resources/imagens/deletar.png">
+   							<img src="resources/imagens/duplicar.png">
+   						</td>
+                        </tr>
+                        <tr>
+                           <td>07/11/2014</td>
+                           <td>17:00</td>
+                           <td>18:10</td>
+                           <td>ILG-JT-DSV-JAVA</td>
+                           <td>DSV-APOIO-PROJ</td>
+                           <td></td>
+                           <td>Reunião com JT sobre o lançamento</td>
+                           <td>EN - DSV</td>
+                           <td>1.10</td>
+                           <td><img src="resources/imagens/editar.png">
+   							<img src="resources/imagens/deletar.png">
+   							<img src="resources/imagens/duplicar.png">
+   						</td>
+                        </tr>
+   					 <tr>
+                           <td id="horas" colspan=8>Total de Horas:</td>
+   						<td colspan=2>17:00</td>
+                        </tr>
+   					  <tr>
+                           <td id="horas" colspan=8>Média de Horas:</td>
+   						<td colspan=2>23:00</td>
+                        </tr>
+   					 </td>
+                     </tbody>
+                  </table>
                </div>
-            </form>
-         </section>
-         <br />
-         <section id="section-atividades">
-            <div class="table-responsive">
-               <table class="table table-bordered table-hover table-striped ">
-                  <caption>
-                     <h4>Atividades</h4>
-                  </caption>
-                  <thead>
-                     <tr>
-                        <th>Data</th>
-                        <th>Hora Inicio</th>
-                        <th>Hora Fim</th>
-                        <th>Projeto</th>
-                        <th>Sub-Projeto</th>
-                        <th>Grupo</th>
-                        <th>Descrição</th>
-                        <th>Tipo Atividade</th>
-                        <th>Horas</th>
-                        <th>Ações</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>07/11/2014</td>
-                        <td>17:00</td>
-                        <td>18:10</td>
-                        <td>ILG-JT-DSV-JAVA</td>
-                        <td>DSV-APOIO-PROJ</td>
-                        <td></td>
-                        <td>Reunião com JT sobre o lançamento</td>
-                        <td>EN - DSV</td>
-                        <td>1.10</td>
-                        <td><img src="resources/imagens/editar.png">
-							<img src="resources/imagens/deletar.png">
-							<img src="resources/imagens/duplicar.png">
-						</td>
-                     </tr>
-                     <tr>
-                        <td>07/11/2014</td>
-                        <td>17:00</td>
-                        <td>18:10</td>
-                        <td>ILG-JT-DSV-JAVA</td>
-                        <td>DSV-APOIO-PROJ</td>
-                        <td></td>
-                        <td>Reunião com JT sobre o lançamento</td>
-                        <td>EN - DSV</td>
-                        <td>1.10</td>
-                        <td><img src="resources/imagens/editar.png">
-							<img src="resources/imagens/deletar.png">
-							<img src="resources/imagens/duplicar.png">
-						</td>
-                     </tr>
-                     <tr>
-                        <td>07/11/2014</td>
-                        <td>17:00</td>
-                        <td>18:10</td>
-                        <td>ILG-JT-DSV-JAVA</td>
-                        <td>DSV-APOIO-PROJ</td>
-                        <td></td>
-                        <td>Reunião com JT sobre o lançamento</td>
-                        <td>EN - DSV</td>
-                        <td>1.10</td>
-                        <td><img src="resources/imagens/editar.png">
-							<img src="resources/imagens/deletar.png">
-							<img src="resources/imagens/duplicar.png">
-						</td>
-                     </tr>
-                     <tr>
-                        <td>07/11/2014</td>
-                        <td>17:00</td>
-                        <td>18:10</td>
-                        <td>ILG-JT-DSV-JAVA</td>
-                        <td>DSV-APOIO-PROJ</td>
-                        <td></td>
-                        <td>Reunião com JT sobre o lançamento</td>
-                        <td>EN - DSV</td>
-                        <td>1.10</td>
-                        <td><img src="resources/imagens/editar.png">
-							<img src="resources/imagens/deletar.png">
-							<img src="resources/imagens/duplicar.png">
-						</td>
-                     </tr>
-                     <tr>
-                        <td>07/11/2014</td>
-                        <td>17:00</td>
-                        <td>18:10</td>
-                        <td>ILG-JT-DSV-JAVA</td>
-                        <td>DSV-APOIO-PROJ</td>
-                        <td></td>
-                        <td>Reunião com JT sobre o lançamento</td>
-                        <td>EN - DSV</td>
-                        <td>1.10</td>
-                        <td><img src="resources/imagens/editar.png">
-							<img src="resources/imagens/deletar.png">
-							<img src="resources/imagens/duplicar.png">
-						</td>
-                     </tr>
-                     <tr>
-                        <td>07/11/2014</td>
-                        <td>17:00</td>
-                        <td>18:10</td>
-                        <td>ILG-JT-DSV-JAVA</td>
-                        <td>DSV-APOIO-PROJ</td>
-                        <td></td>
-                        <td>Reunião com JT sobre o lançamento</td>
-                        <td>EN - DSV</td>
-                        <td>1.10</td>
-                        <td><img src="resources/imagens/editar.png">
-							<img src="resources/imagens/deletar.png">
-							<img src="resources/imagens/duplicar.png">
-						</td>
-                     </tr>
-                     <tr>
-                        <td>07/11/2014</td>
-                        <td>17:00</td>
-                        <td>18:10</td>
-                        <td>ILG-JT-DSV-JAVA</td>
-                        <td>DSV-APOIO-PROJ</td>
-                        <td></td>
-                        <td>Reunião com JT sobre o lançamento</td>
-                        <td>EN - DSV</td>
-                        <td>1.10</td>
-                        <td><img src="resources/imagens/editar.png">
-							<img src="resources/imagens/deletar.png">
-							<img src="resources/imagens/duplicar.png">
-						</td>
-                     </tr>
-					 <tr>
-                        <td id="horas" colspan=8>Total de Horas:</td>
-						<td colspan=2>17:00</td>
-                     </tr>
-					  <tr>
-                        <td id="horas" colspan=8>Média de Horas:</td>
-						<td colspan=2>23:00</td>
-                     </tr>
-					 </td>
-                  </tbody>
-               </table>
-            </div>
-         </section>
-      </div>
+            </section>
+         </div>
       <!-- /container -->
+      </div>
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="vendor/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
       <script src="resources/js/scripts.js"></script>

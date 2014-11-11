@@ -1,3 +1,6 @@
+var itens = [];
+
+
 $(function(){
   $("#pesquisarBotao").click(function(){
     var formSel = $("#formulario_pesquisa");  
@@ -7,5 +10,8 @@ $(function(){
       formSel.show("slow");
     }
   });
+
+  
+
   
 });
