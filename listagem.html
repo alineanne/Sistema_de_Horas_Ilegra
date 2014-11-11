@@ -98,7 +98,7 @@
                                  <div class="form-group">
                                     <label for="descricao" class="control-label col-md-3">Descrição</label>
                                     <div class="col-md-9">
-                                       <input type="text" name="descricao" id="descricao" class="form-control" />
+                                       <textarea rows="3" cols="50" class ="form-control descricao_area"></textarea>
                                     </div>
                                  </div>
 
@@ -107,7 +107,7 @@
                         </div>
                         <div class="modal-footer">
                            <button type="button" class="btn botoes" data-dismiss="modal">Fechar</button>
-                           <button type="button" class="btn botoes">Salvar</button>
+                           <button type="button" class="btn botoes" id="salvar">Salvar</button>
                         </div>
                      </div>
                   </div>
@@ -178,8 +178,8 @@
 					 
                      <div class="form-group">
                         <label for="descricao" id="descricao" class="control-label col-md-2">Descrição</label>
-                        <div class="col-md-10">
-                           <input type="text" name="descricao" id="descricao" class="form-control" />
+                        <div class="col-md-6">
+                           <textarea rows="3" cols="50" class ="form-control descricao_area"></textarea>
                         </div>
                      </div>
 					 
@@ -196,7 +196,7 @@
 			
             <section id="section-atividades">
                <div class="table-responsive">
-                  <table class="table table-bordered table-hover table-striped ">
+                  <table class="table table-bordered table-hover table-striped" id="tblHoras">
                      <caption>
                         <h4>Atividades</h4>
                      </caption>

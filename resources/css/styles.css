@@ -107,6 +107,10 @@ footer{
 	margin-bottom: 15px;
 }
 
+.descricao_area {
+	resize: none;
+}
+
 /**
 Passar para temas
 
