@@ -117,3 +117,9 @@ Passar para temas
 	border-color: #F0974D;
 	color:#ffffff;
 }
+.editar,.duplicar,.deletar{
+	cursor:pointer;
+}
+textarea {
+   resize: none;
+}

@@ -7,7 +7,7 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <link href="vendor/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css"  rel="stylesheet">
-      <link href="resources/css/styles.css" rel="stylesheet">
+      <link href="resources/css/styles.css" rel="stylesheet">          
       <!--<link href="resources/temas/tema-ilegra-laranja.css" rel="stylesheet">-->
       <link rel="icon" href="resources/imagens/favicon.png">
       <title>Sistema de Lançamento de Horas</title>
@@ -41,10 +41,10 @@
                            <div class="">
                               <form  role="form" class="form-horizontal" style="display:block;" id="formulario_nova_atividade" >
 
-   							        <div class="form-group">
-                                    <label for="data" class="control-label col-md-3">Data</label>
+   							        <div class="form-group" data-date-format="dd-mm-yyyy" data-date="01-01-2014">
+                                    <label  for="data" class="control-label col-md-3">Data</label>
                                     <div class="col-md-4 col-xs-4">
-                                       <input type="date" name="data" id="data" class="form-control"/>
+                                       <input id="datepicker" class="form-control"/>
                                     </div>
                                  </div>
 
@@ -87,7 +87,7 @@
                                  <div class="form-group">
                                     <label for="descricao" class="control-label col-md-3">Descrição</label>
                                     <div class="col-md-9">
-                                       <input type="text" name="descricao" id="descricao" class="form-control" />
+                                      <textarea rows="3" cols="50" class ="form-control"></textarea>
                                     </div>
                                  </div>
 
@@ -202,9 +202,9 @@
                            <td>Reunião com JT sobre o lançamento</td>
                            <td>EN - DSV</td>
                            <td>1.10</td>
-                           <td><img src="resources/imagens/editar.png">
-   							<img src="resources/imagens/deletar.png">
-   							<img src="resources/imagens/duplicar.png">
+                           <td><img src="resources/imagens/editar.png" class="editar" title="Editar">
+                        <img src="resources/imagens/deletar.png" class="deletar" title="Deletar">
+                        <img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">
    						</td>
                         </tr>
                         <tr>
@@ -217,9 +217,9 @@
                            <td>Reunião com JT sobre o lançamento</td>
                            <td>EN - DSV</td>
                            <td>1.10</td>
-                           <td><img src="resources/imagens/editar.png">
-   							<img src="resources/imagens/deletar.png">
-   							<img src="resources/imagens/duplicar.png">
+                           <td><img src="resources/imagens/editar.png" class="editar" title="Editar">
+                        <img src="resources/imagens/deletar.png" class="deletar" title="Deletar">
+                        <img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">
    						</td>
                         </tr>
                         <tr>
@@ -232,9 +232,9 @@
                            <td>Reunião com JT sobre o lançamento</td>
                            <td>EN - DSV</td>
                            <td>1.10</td>
-                           <td><img src="resources/imagens/editar.png">
-   							<img src="resources/imagens/deletar.png">
-   							<img src="resources/imagens/duplicar.png">
+                           <td><img src="resources/imagens/editar.png" class="editar" title="Editar">
+                        <img src="resources/imagens/deletar.png" class="deletar" title="Deletar">
+                        <img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">
    						</td>
                         </tr>
                         <tr>
@@ -247,9 +247,9 @@
                            <td>Reunião com JT sobre o lançamento</td>
                            <td>EN - DSV</td>
                            <td>1.10</td>
-                           <td><img src="resources/imagens/editar.png">
-   							<img src="resources/imagens/deletar.png">
-   							<img src="resources/imagens/duplicar.png">
+                           <td><img src="resources/imagens/editar.png" class="editar" title="Editar">
+                        <img src="resources/imagens/deletar.png" class="deletar" title="Deletar">
+                        <img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">
    						</td>
                         </tr>
                         <tr>
@@ -262,9 +262,9 @@
                            <td>Reunião com JT sobre o lançamento</td>
                            <td>EN - DSV</td>
                            <td>1.10</td>
-                           <td><img src="resources/imagens/editar.png">
-   							<img src="resources/imagens/deletar.png">
-   							<img src="resources/imagens/duplicar.png">
+                           <td><img src="resources/imagens/editar.png" class="editar" title="Editar">
+                        <img src="resources/imagens/deletar.png" class="deletar" title="Deletar">
+                        <img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">
    						</td>
                         </tr>
                         <tr>
@@ -277,9 +277,9 @@
                            <td>Reunião com JT sobre o lançamento</td>
                            <td>EN - DSV</td>
                            <td>1.10</td>
-                           <td><img src="resources/imagens/editar.png">
-   							<img src="resources/imagens/deletar.png">
-   							<img src="resources/imagens/duplicar.png">
+                           <td><img src="resources/imagens/editar.png" class="editar" title="Editar">
+                        <img src="resources/imagens/deletar.png" class="deletar" title="Deletar">
+                        <img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">
    						</td>
                         </tr>
                         <tr>
@@ -292,9 +292,9 @@
                            <td>Reunião com JT sobre o lançamento</td>
                            <td>EN - DSV</td>
                            <td>1.10</td>
-                           <td><img src="resources/imagens/editar.png">
-   							<img src="resources/imagens/deletar.png">
-   							<img src="resources/imagens/duplicar.png">
+                           <td><img src="resources/imagens/editar.png" class="editar" title="Editar">
+                        <img src="resources/imagens/deletar.png" class="deletar" title="Deletar">
+                        <img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">
    						</td>
                         </tr>
    					 <tr>
@@ -315,6 +315,6 @@
       </div>
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="vendor/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
-      <script src="resources/js/scripts.js"></script>
+      <script src="resources/js/scripts.js"></script>          
    </body>
 </html>
