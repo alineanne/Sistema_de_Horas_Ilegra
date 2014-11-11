@@ -3,7 +3,7 @@ header {
 	background-color: #4C4C4C;
 }
 
-#logo_texto{
+#logo-texto{
 	display: inline;
 	color: white;
 	margin-left: 20px;
@@ -53,7 +53,7 @@ tbody td{
 	border-color: #F0974D;
 }
 
-#logo_listagem{
+#logo-listagem{
 	margin-top: 15px;
 }
 
@@ -87,13 +87,13 @@ html, body{
 	height: 100%;
 }
 
-#fundo_login{
+#fundo-login{
 	display: block;
 	min-height: 100%;
 	margin-bottom: -110px;
 }
 
-footer {
+footer{
 	height: 110px;
 	background-color: #4C4C4C;
 }
@@ -103,7 +103,7 @@ footer {
 
 }
 
-#header_listagem{
+#header-listagem{
 	margin-bottom: 15px;
 }
 

@@ -14,29 +14,39 @@
    </head>
    <body>
       <div class="fundo_novo">
-         <header id="header_listagem">
+	  
+	  <!-- div cabeçalho -->
+         <header id="header-listagem">
             <div class="container">
                <div class="navbar-header">
-                  <img id="logo_listagem" src="resources/imagens/ilegra.png"/>
-                  <h3 id="logo_texto">Sistema de Horas</h3>
+                  <img id="logo-listagem" src="resources/imagens/ilegra.png"/>
+                  <h3 id="logo-texto">Sistema de Horas</h3>
                </div>
             </div>
          </header>
+		 
+		 <!-- div botão pesquisar e nova atividade-->
          <div class="container" id="form-listagem">
             <section id="section-pesquisa">
                <a href="#" id="pesquisarBotao" class="btn botoes">Pesquisar</a>
-               <!-- Button trigger modal -->
+               <!-- button trigger modal -->
                <button type="button" class="btn botoes" data-toggle="modal" data-target="#novaAtividadeModal">
                Nova Atividade
                </button>
-               <!-- Modal -->
+			   
+               <!-- modal -->
                <div class="modal fade" id="novaAtividadeModal" tabindex="-1" role="dialog" aria-labelledby="modaltitulo" aria-hidden="true">
                   <div class="modal-dialog">
                      <div class="modal-content">
+					 
                         <div class="modal-header">
-                           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
-                           <h4 class="modal-title" id="modaltitulo">Nova Atividade</h4>
+                           <button type="button" class="close" data-dismiss="modal">
+								<span aria-hidden="true">&times;</span>
+								<span class="sr-only">Fechar</span>
+						   </button>
+                           <h4 class="modal-title" id="modal-titulo">Nova Atividade</h4>
                         </div>
+						
                         <div class="modal-body">
                            <div class="">
                               <form  role="form" class="form-horizontal" style="display:block;" id="formulario_nova_atividade" >
@@ -47,8 +57,6 @@
                                        <input type="date" name="data" id="data" class="form-control"/>
                                     </div>
                                  </div>
-
-                                 <!--teste de dimensionamento -->
 
                                  <div class="form-group">
                                     <label for="projeto" class="control-label col-md-3">Projeto</label>
@@ -68,6 +76,7 @@
                                        </select>
                                     </div>
                                  </div>
+								 
                                  <div class="form-group">
                                     <label for="grupo" class="control-label col-md-3">Grupo</label>
                                     <div class="col-md-9">
@@ -76,6 +85,7 @@
                                        </select>
                                     </div>
                                  </div>
+								 
                                  <div class="form-group">
                                     <label for="tipo_atividade" class="control-label col-md-3">Tipo Atividade</label>
                                     <div class="col-md-9">
@@ -84,6 +94,7 @@
                                        </select>
                                     </div>
                                  </div>
+								 
                                  <div class="form-group">
                                     <label for="descricao" class="control-label col-md-3">Descrição</label>
                                     <div class="col-md-9">
@@ -102,27 +113,32 @@
                   </div>
                </div>
                <!-- Modal Final-->
-               <form  role="form" class="form-horizontal" style="display:none;" id="formulario_pesquisa" >
+			   
+               <form  role="form" class="form-horizontal" style="display:none;" id="formulario_pesquisa">
                   <br />
                   <div class="jumbotron">
-   			   <div class="form-group">
+				  
+					<div class="form-group">
                                     <label for="text" class="control-label col-md-2">Colaborador</label>
                                     <div class="col-md-6">
                                        <input type="text" name="colaborador" id="colaborador" class="form-control"/>
                                     </div>
                                  </div>
-   			   <div class="form-group">
+								 
+					<div class="form-group">
                                     <label for="data" class="control-label col-md-2">Mês/Ano</label>
                                     <div class="col-md-3">
                                        <input type="month" name="mes_ano" id="mes_ano" class="form-control"/>
                                     </div>
                                  </div>
-                     <div class="form-group">
+								 
+                    <div class="form-group">
                         <label for="data" class="control-label col-md-2">Data</label>
                         <div class="col-md-3">
                            <input type="date" name="data" id="data" class="form-control"/>
                         </div>
                      </div>
+					 
                      <div class="form-group">
                         <label for="projeto" class="control-label col-md-2" >Projeto</label>
                         <div class="col-md-6">
@@ -132,6 +148,7 @@
                            </select>
                         </div>
                      </div>
+					 
                      <div class="form-group">
                         <label for="subprojeto" class="control-label col-md-2">Sub-projeto</label>
                         <div class="col-md-6">
@@ -140,6 +157,7 @@
                            </select>
                         </div>
                      </div>
+					 
                      <div class="form-group">
                         <label for="grupo" class="control-label col-md-2">Grupo</label>
                         <div class="col-md-6">
@@ -148,6 +166,7 @@
                            </select>
                         </div>
                      </div>
+					 
                      <div class="form-group">
                         <label for="tipo_atividade" class="control-label col-md-2">Tipo Atividade</label>
                         <div class="col-md-6">
@@ -156,21 +175,25 @@
                            </select>
                         </div>
                      </div>
+					 
                      <div class="form-group">
                         <label for="descricao" id="descricao" class="control-label col-md-2">Descrição</label>
                         <div class="col-md-10">
                            <input type="text" name="descricao" id="descricao" class="form-control" />
                         </div>
                      </div>
+					 
                      <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
                            <input type="submit" value="Pesquisar" id="pesquisar" class="btn"/>
                         </div>
                      </div>
+					 
                   </div>
                </form>
             </section>
             <br />
+			
             <section id="section-atividades">
                <div class="table-responsive">
                   <table class="table table-bordered table-hover table-striped ">
@@ -311,6 +334,7 @@
                </div>
             </section>
          </div>
+		 
       <!-- /container -->
       </div>
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
