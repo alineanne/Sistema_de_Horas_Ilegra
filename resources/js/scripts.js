@@ -5,13 +5,10 @@ $(function(){
   $("#pesquisarBotao").click(function(){
     var formSel = $("#formulario_pesquisa");  
     if(formSel.is(":visible")){
-      formSel.hide("slow");
+      formSel.slideUp("slow");
     } else {
-      formSel.show("slow");
+      formSel.slideDown("slow");
     }
   });
-
-  
-
   
 });
