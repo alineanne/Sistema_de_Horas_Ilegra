@@ -3,15 +3,19 @@
 .table caption{
 	/**background-color: #ccc;**/
 	/**text-align: center;**/
-	border-bottom: 1px solid #ff5722;
-	background-color:#ff5722;
-	color: #ffffff;	
+	border-bottom: 1px solid white;
+	background-color:#c0c0c0;
+	color: black;	
 	text-align: center;
 }
 
 thead{
-	border-bottom: 1px solid #E8260C;
-	border-top: 1px solid #E8260C;
-	background-color:#E8260C;
+	border-bottom: 1px solid #c0c0c0;
+	border-top: 1px solid #c0c0c0;
+	background-color: #c0c0c0;
 	color: #fff;
+}
+
+tr:hover td {
+	background-color: #EA7723;
 }

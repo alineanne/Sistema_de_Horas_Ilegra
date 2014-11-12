@@ -18,25 +18,43 @@ function gerarTabela(){
 					'<td>'+itens[i].tipo+'</td>'+
 					'<td>'+itens[i].descricao+'</td>'+
 					'<td>'+itens[i].totalhorasatividades+'</td>'+
-					'<td><img src="resources/imagens/editar.png" class="editar"title="Editar">'+
-					'<img src="resources/imagens/deletar.png" class="deletar"title="Deletar">'+
-					'<img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">'+
-					'<tr>'	+
+					'<td>'+
+						'<img src="resources/imagens/editar.png" class="editar"title="Editar"  id="e-'+i+'">'+
+						'<img src="resources/imagens/deletar.png" class="deletar"title="Deletar" id="r-'+i+'">'+
+						'<img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">'+					
+					'</td>';				
+					
+					/**'<tr>'	+
 					'<td id="horas" colspan=8>'+"Total de Horas:"+'</td>'+
 					'<td colspan=2>'+"48:00"+'</td>'+	
 					'</tr>'+
 					'<tr>'+
 					'<td id="horas" colspan=8>'+"Média de Horas:"+'</td>'+
 					'<td colspan=2>'+"17:00"+'</td>'+	
-					'</tr>'+	
-					'</td>';				
+					'</tr>'+	*/
 	}				
 						
-	$("#tblHoras tbody").html(tbody);					
+	$("#tblHoras tbody").html(tbody);	
+	carregarEventos();	
+}
+
+function carregarEventos(){
+
+	$(".deletar").click(function(){
+	
+		var id = $(this).attr("id");
+		var index = id.substring(2);
+		
+		itens.splice(index, 1);
+		gerarTabela();	
+	});	
+
 }
 
 $(function(){
 
+	gerarTabela();
+	
 	$("#salvar").click(function(){
 		
 		//JS PURO
@@ -73,13 +91,13 @@ $(function(){
   });
 });
 
-
+/**
 function deletar(){
 	$(".deletar").click(function(){ 
 		$('#r-1').remove(); 
 		});
 }
-
+*/
 
 /*$(function(){
     //Código das funções Adicionar, Salvar, Editar e Excluir
