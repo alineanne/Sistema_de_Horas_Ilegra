@@ -18,9 +18,9 @@ function gerarTabela(){
 					'<td>'+itens[i].tipo+'</td>'+
 					'<td>'+itens[i].descricao+'</td>'+
 					'<td></td>'+
-					'<td><img src="resources/imagens/editar.png">'+
-					'<img src="resources/imagens/deletar.png">'+
-					'<img src="resources/imagens/duplicar.png">'+
+					'<td><img src="resources/imagens/editar.png" class="editar"title="Editar">'+
+					'<img src="resources/imagens/deletar.png" class="deletar"title="Deletar">'+
+					'<img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">'+
 					'</td>';
 	}
 						
