@@ -111,6 +111,11 @@ footer{
 	resize: none;
 }
 
+
+.editar,.duplicar,.deletar{
+	cursor:pointer;
+}
+
 /**
 Passar para temas
 

@@ -18,9 +18,9 @@ function gerarTabela(){
 					'<td>'+itens[i].tipo+'</td>'+
 					'<td>'+itens[i].descricao+'</td>'+
 					'<td>'+itens[i].totalhorasatividades+'</td>'+
-					'<td><img src="resources/imagens/editar.png" id="r-0">'+
-					'<img src="resources/imagens/deletar.png"  id="r-1">'+
-					'<img src="resources/imagens/duplicar.png" id="r-2">'+
+					'<td><img src="resources/imagens/editar.png" class="editar"title="Editar">'+
+					'<img src="resources/imagens/deletar.png" class="deletar"title="Deletar">'+
+					'<img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">'+
 					'<tr>'	+
 					'<td id="horas" colspan=8>'+"Total de Horas:"+'</td>'+
 					'<td colspan=2>'+"48:00"+'</td>'+	
@@ -31,6 +31,7 @@ function gerarTabela(){
 					'</tr>'+	
 					'</td>';				
 	}				
+						
 	$("#tblHoras tbody").html(tbody);					
 }
 
