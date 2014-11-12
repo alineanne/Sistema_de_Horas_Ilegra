@@ -1,5 +1,31 @@
 var itens = [];
 
+function gerarTabela(){
+
+	$("#tblHoras tbody").html("");
+
+	var tbody = '';
+						
+	for (var i=0, max=itens.length; i<max; i++){
+		tbody += 
+					'<tr>' +
+					'<td>'+itens[i].data+'</td>'+
+					'<td>'+itens[i].horainicio+'</td>'+
+					'<td>'+itens[i].horafim+'</td>'+
+					'<td>'+itens[i].projeto+'</td>'+
+					'<td>'+itens[i].subprojeto+'</td>'+
+					'<td>'+itens[i].grupo+'</td>'+
+					'<td>'+itens[i].tipo+'</td>'+
+					'<td>'+itens[i].descricao+'</td>'+
+					'<td></td>'+
+					'<td><img src="resources/imagens/editar.png">'+
+					'<img src="resources/imagens/deletar.png">'+
+					'<img src="resources/imagens/duplicar.png">'+
+					'</td>';
+	}
+						
+	$("#tblHoras tbody").html(tbody);					
+}
 
 $(function(){
 
@@ -12,15 +38,18 @@ $(function(){
 		//$("#nova-atividade-descricao").val();
 		
 		var atividade = {
-			descricao: $("#nova-atividade-descricao").val(),
 			data: $("#nova-atividade-data").val(),
+			horainicio: $("#nova-atividade-horainicio").val(),
+			horafim: $("#nova-atividade-horafim").val(),
 			projeto: $("#nova-atividade-projeto").val(),
 			subprojeto: $("#nova-atividade-subprojeto").val(),
 			grupo: $("#nova-atividade-grupo").val(),
-			tipo: $("#nova-atividade-tipo").val()
+			tipo: $("#nova-atividade-tipo").val(),
+			descricao: $("#nova-atividade-descricao").val()
 		};		
 		
 		itens.push(atividade);
+		gerarTabela();
 		alert ("Atividade adicionada com sucesso!")
 		
 	});
