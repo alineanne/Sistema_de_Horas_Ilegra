@@ -2,6 +2,29 @@ var itens = [];
 
 
 $(function(){
+
+	$("#salvar").click(function(){
+		
+		//JS PURO
+		//document.getElementById("nova-atividade-descricao").value
+		
+		//JQuery
+		//$("#nova-atividade-descricao").val();
+		
+		var atividade = {
+			descricao: $("#nova-atividade-descricao").val(),
+			data: $("#nova-atividade-data").val(),
+			projeto: $("#nova-atividade-projeto").val(),
+			subprojeto: $("#nova-atividade-subprojeto").val(),
+			grupo: $("#nova-atividade-grupo").val(),
+			tipo: $("#nova-atividade-tipo").val()
+		};		
+		
+		itens.push(atividade);
+		alert ("Atividade adicionada com sucesso!")
+		
+	});
+
   $("#pesquisarBotao").click(function(){
     var formSel = $("#formulario_pesquisa");  
     if(formSel.is(":visible")){
@@ -11,6 +34,7 @@ $(function(){
     }
   });
 });
+
 
 /*$(function(){
     //Código das funções Adicionar, Salvar, Editar e Excluir
