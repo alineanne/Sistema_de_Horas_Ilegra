@@ -1,164 +1,112 @@
-var itens = [];
-
-function gerarTabela(){
-
-	$("#tblHoras tbody").html("");
-
-	var tbody = '';
-						
-	for (var i=0, max=itens.length; i<max; i++){
-		tbody += 
-					'<tr>' +
-					'<td>'+itens[i].data+'</td>'+
-					'<td>'+itens[i].horainicio+'</td>'+
-					'<td>'+itens[i].horafim+'</td>'+
-					'<td>'+itens[i].projeto+'</td>'+
-					'<td>'+itens[i].subprojeto+'</td>'+
-					'<td>'+itens[i].grupo+'</td>'+
-					'<td>'+itens[i].tipo+'</td>'+
-					'<td>'+itens[i].descricao+'</td>'+
-					'<td>'+itens[i].totalhorasatividades+'</td>'+
-					'<td>'+
-						'<img src="resources/imagens/editar.png" class="editar"title="Editar"  id="e-'+i+'">'+
-						'<img src="resources/imagens/deletar.png" class="deletar"title="Deletar" id="r-'+i+'">'+
-						'<img src="resources/imagens/duplicar.png" class="duplicar"title="Duplicar">'+					
-					'</td>';				
-					
-					/**'<tr>'	+
-					'<td id="horas" colspan=8>'+"Total de Horas:"+'</td>'+
-					'<td colspan=2>'+"48:00"+'</td>'+	
-					'</tr>'+
-					'<tr>'+
-					'<td id="horas" colspan=8>'+"Média de Horas:"+'</td>'+
-					'<td colspan=2>'+"17:00"+'</td>'+	
-					'</tr>'+	*/
-	}				
-						
-	$("#tblHoras tbody").html(tbody);	
-	carregarEventos();	
-}
-
-function carregarEventos(){
-
-	$(".deletar").click(function(){
-	
-		var id = $(this).attr("id");
-		var index = id.substring(2);
-		
-		itens.splice(index, 1);
-		gerarTabela();	
-	});	
-
-}
 
 $(function(){
 
-	gerarTabela();
-	
-	$("#salvar").click(function(){
-		
-		//JS PURO
-		//document.getElementById("nova-atividade-descricao").value
-		
-		//JQuery
-		//$("#nova-atividade-descricao").val();
-		
-		var atividade = {
-			data: $("#nova-atividade-data").val(),
-			horainicio: $("#nova-atividade-horainicio").val(),
-			horafim: $("#nova-atividade-horafim").val(),
-			projeto: $("#nova-atividade-projeto").val(),
-			subprojeto: $("#nova-atividade-subprojeto").val(),
-			grupo: $("#nova-atividade-grupo").val(),
-			tipo: $("#nova-atividade-tipo").val(),
-			descricao: $("#nova-atividade-descricao").val(),
-			totalhorasatividades: $("#totalhorasatividades").val()
-		};		
-		
-		itens.push(atividade);
-		gerarTabela();
-		alert ("Atividade adicionada com sucesso!")
-		
-	});
-
-  $("#pesquisarBotao").click(function(){
-    var formSel = $("#formulario_pesquisa");  
-    if(formSel.is(":visible")){
-      formSel.slideUp("slow");
-    } else {
-      formSel.slideDown("slow");
-    }
-  });
+	$("#pesquisarBotao").click(function(){
+	    var formSel = $("#formulario_pesquisa");  
+	    if(formSel.is(":visible")){
+	      formSel.slideUp("slow");
+	    } else {
+	      formSel.slideDown("slow");
+	    }
+	 });
+  
 });
 
-/**
-function deletar(){
-	$(".deletar").click(function(){ 
-		$('#r-1').remove(); 
-		});
+function isEmpty(valor){
+	return valor.trim() === "";
 }
-*/
 
-/*$(function(){
-    //Código das funções Adicionar, Salvar, Editar e Excluir
-    $(".btnEditar").bind("click", Editar);
-    $(".btnExcluir").bind("click", Excluir);
-    $("#btnAdicionar").bind("click", Adicionar);           
- 
-});
+function converterHoraParaMinutos(valor){
 
-function Adicionar(){
-    $("#tblHoras tbody").append(
-        "<tr>"+
-        "<td><input type='text'/></td>"+
-        "<td><input type='text'/></td>"+
-        "<td><input type='text'/></td>"+
-        "<td><img src='images/disk.png' class='btnSalvar'>
-                       <img src='images/delete.png' class='btnExcluir'/></td>"+
-        "</tr>");
-     
-        $(".btnSalvar").bind("click", Salvar);     
-        $(".btnExcluir").bind("click", Excluir);
-};
+	var splitValor = valor.split(":");
+	var hora = splitValor[0];
+	var min  = splitValor[1];
 
-function Salvar(){
-    var par = $(this).parent().parent(); //tr
-    var tdNome = par.children("td:nth-child(1)");
-    var tdTelefone = par.children("td:nth-child(2)");
-    var tdEmail = par.children("td:nth-child(3)");
-    var tdBotoes = par.children("td:nth-child(4)");
- 
-    tdNome.html(tdNome.children("input[type=text]").val());
-    tdTelefone.html(tdTelefone.children("input[type=text]").val());
-    tdEmail.html(tdEmail.children("input[type=text]").val());
-    tdBotoes.html("<img src='images/delete.png'
-           class='btnExcluir'/><img src='images/pencil.png' class='btnEditar'/>");
- 
-    $(".btnEditar").bind("click", Editar);
-    $(".btnExcluir").bind("click", Excluir);
-};
+	return parseInt(hora) * 60 + parseInt(min);
+	
+}
 
-function Editar(){
- var par = $(this).parent().parent(); //tr
- var tdNome = par.children("td:nth-child(1)");
- var tdTelefone = par.children("td:nth-child(2)");
- var tdEmail = par.children("td:nth-child(3)");
- var tdBotoes = par.children("td:nth-child(4)");
- 
- tdNome.html("<input type='text' id='txtNome' value='"+tdNome.html()+"'/>");
- tdTelefone.html("<input type='text' 
-                  id='txtTelefone' value='"+tdTelefone.html()+"'/>");
- tdEmail.html("<input type='text' id='txtEmail' value='"+tdEmail.html()+"'/>");
- tdBotoes.html("<img src='images/disk.png' class='btnSalvar'/>");
- 
- $(".btnSalvar").bind("click", Salvar);
- $(".btnEditar").bind("click", Editar);
- $(".btnExcluir").bind("click", Excluir);
-};
+function converterMinutosParaHorasMinutos(valor){
+	
+	var hora = Math.floor(valor / 60);
+	var minuto = valor % 60;
 
-function Excluir(){
-    var par = $(this).parent().parent(); //tr
-    par.remove();
-};*/
+	if(minuto < 10 ){
+		minuto = "0"+minuto;
+	}
 
-/*http://www.linhadecodigo.com.br/artigo/3426/editando-e-removendo-linhas-em-uma-tabela-html-com-jquery.aspx*/
+	return hora + ":" + minuto;		
+
+}
+
+function calcularDiferencaEntreHoras(horaInicial, horaFinal){
+
+	var minInicial = converterHoraParaMinutos(horaInicial);
+	var minFinal   = converterHoraParaMinutos(horaFinal);
+
+	return minFinal - minInicial;
+
+}
+
+function isDatadeLancamentoValida(dataLancamento){
+	
+	var limite = 5;
+	var dataLimite = new Date();
+ 	dataLimite.setDate(dataLimite.getDate()-limite);
+
+	var novadata = new Date(dataLancamento + " 12:00:00");
+	var valido = true;
+
+	if(novadata < dataLimite){
+		valido = false;
+		alert("Data ultrapassa limite!");
+	}
+	if( novadata > new Date()){
+		valido = false;
+		alert("Data não pode ser futura!");
+	}
+
+	return valido;
+
+}
+
+function formularioAtividadeValido(atividade){
+
+	var seletor = "";
+	var alvo = "";
+	var valido = true;
+
+	for(propriedade in atividade){
+
+		seletor = ".valida-" + propriedade;
+		alvo = $(seletor);
+
+		if(isEmpty(atividade[propriedade])){	
+			alvo.addClass("has-error");
+			valido = false
+		} else {
+			alvo.removeClass("has-error");
+		}
+
+	}
+
+	if(!valido){
+		alert ("O campos em vermelho estão com erro!");
+	}
+
+	if(valido && calcularDiferencaEntreHoras(atividade.horainicio, atividade.horafim) < 0){		
+		valido = false;
+		$(".valida-horafim").addClass("has-error");
+		$(".nova-atividade-horafim").val("");
+		alert("Hora Fim deve ser posterior a Hora Inicio!");
+	} 
+
+	if( !isDatadeLancamentoValida(atividade.data) ){
+		valido = false;
+		$(".valida-data").addClass("has-error");
+		$(".nova-atividade-data").val("");				
+	}
+
+	return valido;
+
+}
