@@ -3,6 +3,17 @@ header {
 	background-color: #4C4C4C;
 }
 
+caption {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: #4C4C4C;
+	text-align: left;
+	background-color: #c0c0c0;
+	border: 1px solid #D2D2D2;
+	padding-left: 10px;
+	border-radius: 10px 10px 0px 0px;
+}
+
 #logo-texto{
 	display: inline;
 	color: white;
@@ -19,14 +30,6 @@ header {
 	footer{
 		display: none;
 	}
-}
-
-th{
-	border:none !important;
-}
-
-tbody td{
-	border: 1px solid #7e7e7e;
 }
 
 #titulo-login{
@@ -81,8 +84,6 @@ tr:hover td {
 
 
 /** Estrutura */
-
-
 html, body{
 	height: 100%;
 }
@@ -118,9 +119,7 @@ footer{
 
 /**
 Passar para temas
-
 */
-
 .botoes{
 	background-color: #EA7723;
 	border-color: #F0974D;
