@@ -71,10 +71,11 @@ function carregarEventos(){
 
 	$(".deletar").click(function(){
 	
-		var index = limparId($(this).attr("id"));
-		itens.splice(index, 1)
-		gerarTabela();	
-
+		if(confirm("Deseja excluir esse registro?")){
+			var index = limparId($(this).attr("id"));
+			itens.splice(index, 1)
+			gerarTabela();	
+		}
 	});	
 
 	$(".editar").click(function(){
