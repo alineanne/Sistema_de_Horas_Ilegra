@@ -7,9 +7,8 @@ function gerarTabela(){
 	var tbody = '';
 	var totalMinutos = 0;
 	var diferencaMinutos = 0;
-	var i=0;
 
-	for (i, max=itens.length; i<max; i++){
+	for (var i = 0, max=itens.length; i<max; i++){
 		
 		diferencaMinutos = calcularDiferencaEntreHoras(itens[i].horainicio, itens[i].horafim);
 		totalMinutos += diferencaMinutos;
@@ -40,8 +39,6 @@ function gerarTabela(){
 					'<td colspan=2>'+converterMinutosParaHorasMinutos(totalMinutos)+'</td>'+	
 				'</tr>';		
 	}
-
-
 						
 	$("#tblHoras tbody").html(tbody);	
 	carregarEventos();	
@@ -62,8 +59,24 @@ function limparModal(){
 	$("#nova-atividade-grupo").val("");
 	$("#nova-atividade-tipo").val("");
 	$("#nova-atividade-descricao").val("");
-	$("#nova-atividade-id").val("");
-	
+	$("#nova-atividade-id").val("");	
+}
+
+function carregarFormularioModal(idHTML){
+
+	var index = limparId(idHTML);
+	var atividade = itens[index];
+
+	$("#nova-atividade-data").val(atividade.data);
+	$("#nova-atividade-horainicio").val(atividade.horainicio);
+	$("#nova-atividade-horafim").val(atividade.horafim);
+	$("#nova-atividade-projeto").val(atividade.projeto);
+	$("#nova-atividade-subprojeto").val(atividade.subprojeto);
+	$("#nova-atividade-grupo").val(atividade.grupo);
+	$("#nova-atividade-tipo").val(atividade.tipo);
+	$("#nova-atividade-descricao").val(atividade.descricao);
+
+	$("#novaAtividadeModal").modal("show");	
 
 }
 
@@ -80,38 +93,12 @@ function carregarEventos(){
 
 	$(".editar").click(function(){
 
-		var index = limparId($(this).attr("id"));
-		var atividade = itens[index];
-
 		$("#nova-atividade-id").val(index);
-		$("#nova-atividade-data").val(atividade.data);
-		$("#nova-atividade-horainicio").val(atividade.horainicio);
-		$("#nova-atividade-horafim").val(atividade.horafim);
-		$("#nova-atividade-projeto").val(atividade.projeto);
-		$("#nova-atividade-subprojeto").val(atividade.subprojeto);
-		$("#nova-atividade-grupo").val(atividade.grupo);
-		$("#nova-atividade-tipo").val(atividade.tipo);
-		$("#nova-atividade-descricao").val(atividade.descricao);
-
-		$("#novaAtividadeModal").modal("show");
+		carregarFormularioModal($(this).attr("id"));
 	});
 
 	$(".duplicar").click(function(){
-
-		var index = limparId($(this).attr("id"));
-		var atividade = itens[index];
-
-		$("#nova-atividade-data").val(atividade.data);
-		$("#nova-atividade-horainicio").val(atividade.horainicio);
-		$("#nova-atividade-horafim").val(atividade.horafim);
-		$("#nova-atividade-projeto").val(atividade.projeto);
-		$("#nova-atividade-subprojeto").val(atividade.subprojeto);
-		$("#nova-atividade-grupo").val(atividade.grupo);
-		$("#nova-atividade-tipo").val(atividade.tipo);
-		$("#nova-atividade-descricao").val(atividade.descricao);
-
-		$("#novaAtividadeModal").modal("show");
-
+		carregarFormularioModal($(this).attr("id"));
 	});	
 }
 
@@ -150,12 +137,7 @@ $(function(){
 			limparModal();
 			gerarTabela();
 			alert ("Atividade adicionada com sucesso!")			
-		} 
-		
-
+		} 		
 		
 	});
 });
-
-
-
