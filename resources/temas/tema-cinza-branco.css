@@ -1,17 +1,60 @@
+header {
+	background-color: #4C4C4C;
+}
+
 caption {
-	padding-top: 8px;
-	padding-bottom: 8px;
 	color: #4C4C4C;
-	text-align: left;
 	background-color: #c0c0c0;
 	border: 1px solid #D2D2D2;
-	padding-left: 10px;
-	border-radius: 10px 10px 0px 0px;
 }
 
 #botao {
-	width:90px;
 	background-color: #EA7723;
 	border-color: #F0974D;
 }
 
+#titulo-login{
+	color:#717173;
+} 
+
+#logo-listagem {
+	background-image: url("../imagens/ilegra.png");
+}
+
+#logo {
+	background-image: url("../imagens/logo_ilegra.png");
+}
+
+#logo-texto{
+	color: white;
+}
+
+#pesquisar {
+	background-color: #c0c0c0;
+}
+
+.botoes{
+	background-color: #EA7723;
+	border-color: #F0974D;
+	color:#ffffff;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header{
+	border: 1px solid #ddd;
+	background: #f6f6f6;
+	font-weight: bold;
+	color: #EA7723;
+} 
+
+.ui-datepicker {  
+    font: 9pt Arial, sans-serif;  
+} 
+
+footer{
+	height: 110px;
+	background-color: #4C4C4C;
+}
+
+tr:hover td {
+	background-color: #c0c0c0;
+}

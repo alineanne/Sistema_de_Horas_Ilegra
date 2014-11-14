@@ -16,30 +16,32 @@ html, body{
 
 header {
 	height: 110px;
-	background-color: #4C4C4C;
 }
 
 #logo {
-	width: 120px;
+	width: 170px;
+	height: 120px;
 	display:inline-block;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	background-repeat: no-repeat;
 	}
+		
 
 #logo-texto{
-	display: inline;
-	color: white;
-	margin-left: 20px;
+		display: inline-block;
+		margin-left: 10px;
+}
+
+#logo-listagem {
+	display: inline-block;
+	width: 120px;
+	height: 90px;
+	background-repeat: no-repeat;
 }
 
 #titulo-login{
-	margin-left: 20px;
 	color: white;
 	display: inline-block;
-	margin-top: 25px;
-	vertical-align: middle;
 	font-size: 20px;
-	color:#717173;
 }
 
 #fundo-login{
@@ -56,16 +58,20 @@ header {
 	margin-top: 15px;
 }
 
+caption {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: left;
+	padding-left: 10px;
+	border-radius: 10px 10px 0px 0px;
+}
+
 #titulo-listagem{
 	margin-top: 1px;
 }
 
 #header-listagem{
 	margin-bottom: 15px;
-}
-
-#pesquisar {
-	background-color: #c0c0c0;
 }
 
 #descricao{
@@ -77,25 +83,10 @@ header {
 	font-weight:bold;
 }
 
-footer{
-	height: 110px;
-	background-color: #4C4C4C;
-}
-
-tr:hover td {
-	background-color: #c0c0c0;
-}
-
 .descricao_area {
 	resize: none;
 }
 
 .editar,.duplicar,.deletar{
 	cursor:pointer;
-}
-
-.botoes{
-	background-color: #EA7723;
-	border-color: #F0974D;
-	color:#ffffff;
 }

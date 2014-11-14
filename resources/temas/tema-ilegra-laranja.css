@@ -1,12 +1,11 @@
+header {
+	background-color: #4C4C4C;
+}
+
 caption {
-	padding-top: 8px;
-	padding-bottom: 8px;
 	color: white;
-	text-align: left;
 	background-color: #646362;
 	border: 1px solid #D2D2D2;
-	padding-left: 10px;
-	border-radius: 10px 10px 0px 0px;
 } /*Cabeçalho Atividades*/
 
 thead{
@@ -21,6 +20,43 @@ thead{
 	background-color: #656B69;
 	border-color: #EA7723;
 }
+
+#titulo-login{
+	color:#717173;
+} 
+
+#logo-listagem {
+	background-image: url("../imagens/ilegra.png");
+}
+
+#logo {
+	background-image: url("../imagens/logo_ilegra.png");
+}
+
+#logo-texto{
+	color: white;
+}
+
+#pesquisar {
+	background-color: #c0c0c0;
+}
+
+.botoes{
+	background-color: #EA7723;
+	border-color: #F0974D;
+	color:#ffffff;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header{
+	border: 1px solid #ddd;
+	background: #f6f6f6;
+	font-weight: bold;
+	color: #EA7723;
+} 
+
+.ui-datepicker {  
+    font: 9pt Arial, sans-serif;  
+} 
 
 .background-login::after {
 	content: "";
@@ -46,10 +82,19 @@ thead{
 	z-index: -1;   
 }
 
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+	border: 1px solid #A8A5A5;
+}
+
 td{
 	background-color: #dddddd;
 }
 
-.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-	border: 1px solid #A8A5A5;
+footer{
+	height: 110px;
+	background-color: #4C4C4C;
+}
+
+tr:hover td {
+	background-color: #c0c0c0;
 }

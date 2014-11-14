@@ -22,10 +22,6 @@ $(function(){
 	    });
 }); 
 	
-	
-	
-
-
 function isEmpty(valor){
 	return valor.trim() === "";
 }
