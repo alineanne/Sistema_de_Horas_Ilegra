@@ -1,0 +1,17 @@
+caption {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: #4C4C4C;
+	text-align: left;
+	background-color: #c0c0c0;
+	border: 1px solid #D2D2D2;
+	padding-left: 10px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+#botao {
+	width:90px;
+	background-color: #EA7723;
+	border-color: #F0974D;
+}
+
