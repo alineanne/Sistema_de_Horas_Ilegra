@@ -9,7 +9,7 @@ $(function(){
 	      formSel.slideDown("slow");
 	    }
 	 });
-  
+	$( "#datepicker" ).datepicker();
 });
 
 function isEmpty(valor){
@@ -54,7 +54,7 @@ function isDatadeLancamentoValida(dataLancamento){
 	var dataLimite = new Date();
  	dataLimite.setDate(dataLimite.getDate()-limite);
 
-	var novadata = new Date(dataLancamento + " 12:00:00");
+	var novadata = new Date(dataLancamento + " 00:00:00");
 	var valido = true;
 
 	if(novadata < dataLimite){
