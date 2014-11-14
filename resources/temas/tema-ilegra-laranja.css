@@ -7,18 +7,17 @@ caption {
 	border: 1px solid #D2D2D2;
 	padding-left: 10px;
 	border-radius: 10px 10px 0px 0px;
-}
+} /*Cabeçalho Atividades*/
 
 thead{
 	border-bottom: 1px solid #c0c0c0;
 	border-top: 1px solid #c0c0c0;
 	background-color: #c0c0c0;
 	color: #646362;
-}
+} /*Cabeçalho Data, Hora inicio*/
 
 #botao {
-	width:100px;
-	margin-left: 300px;
+	width:90px;
 	background-color: #656B69;
 	border-color: #EA7723;
 }

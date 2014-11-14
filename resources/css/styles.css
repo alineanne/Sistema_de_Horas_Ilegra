@@ -1,23 +1,5 @@
-header {
-	height: 110px;
-	background-color: #4C4C4C;
-}
-
-caption {
-	padding-top: 8px;
-	padding-bottom: 8px;
-	color: #4C4C4C;
-	text-align: left;
-	background-color: #c0c0c0;
-	border: 1px solid #D2D2D2;
-	padding-left: 10px;
-	border-radius: 10px 10px 0px 0px;
-}
-
-#logo-texto{
-	display: inline;
-	color: white;
-	margin-left: 20px;
+html, body{
+	height: 100%;
 }
 
 @media (min-width: 400px) {
@@ -32,6 +14,24 @@ caption {
 	}
 }
 
+header {
+	height: 110px;
+	background-color: #4C4C4C;
+}
+
+#logo {
+	width: 120px;
+	display:inline-block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	}
+
+#logo-texto{
+	display: inline;
+	color: white;
+	margin-left: 20px;
+}
+
 #titulo-login{
 	margin-left: 20px;
 	color: white;
@@ -42,18 +42,14 @@ caption {
 	color:#717173;
 }
 
-#logo {
-	width: 120px;
-	display:inline-block;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	}
+#fundo-login{
+	display: block;
+	min-height: 100%;
+	margin-bottom: -110px;
+}
 
-#botao {
-	width:100px;
-	margin-left: 300px;
-	background-color: #EA7723;
-	border-color: #F0974D;
+#form-login{
+	margin-top: 7%;
 }
 
 #logo-listagem{
@@ -64,9 +60,8 @@ caption {
 	margin-top: 1px;
 }
 
-
-tr:hover td {
-	background-color: #c0c0c0;
+#header-listagem{
+	margin-bottom: 15px;
 }
 
 #pesquisar {
@@ -82,44 +77,23 @@ tr:hover td {
 	font-weight:bold;
 }
 
-
-/** Estrutura */
-html, body{
-	height: 100%;
-}
-
-#fundo-login{
-	display: block;
-	min-height: 100%;
-	margin-bottom: -110px;
-}
-
 footer{
 	height: 110px;
 	background-color: #4C4C4C;
 }
 
-#form-login{
-	margin-top: 7%;
-
-}
-
-#header-listagem{
-	margin-bottom: 15px;
+tr:hover td {
+	background-color: #c0c0c0;
 }
 
 .descricao_area {
 	resize: none;
 }
 
-
 .editar,.duplicar,.deletar{
 	cursor:pointer;
 }
 
-/**
-Passar para temas
-*/
 .botoes{
 	background-color: #EA7723;
 	border-color: #F0974D;
