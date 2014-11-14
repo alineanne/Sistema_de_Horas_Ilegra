@@ -92,7 +92,7 @@ function carregarEventos(){
 	});	
 
 	$(".editar").click(function(){
-
+		var index = limparId($(this).attr("id"));
 		$("#nova-atividade-id").val(index);
 		carregarFormularioModal($(this).attr("id"));
 	});
